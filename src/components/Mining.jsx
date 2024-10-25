@@ -55,7 +55,7 @@ const Mining = () => {
             position: "absolute",
             width: "100%",
             height: "408px",
-            top: "50px",
+            top: "25px",
             left: "50%",
             transform: "translateX(-50%)",
           }}
@@ -68,7 +68,7 @@ const Mining = () => {
             position: "absolute",
             width: "100%",
             height: "408px",
-            top: "50px",
+            top: "25px",
             left: "50%",
             transform: "translateX(-50%)",
           }}
