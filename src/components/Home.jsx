@@ -1,15 +1,26 @@
 import React, { useState, useEffect } from "react";
 import "./Home.css";
 import shadowImage from "../assets/shadow.svg";
+import hamburger from "../assets/hamburger.svg";
 import animationData from "../assets/animation.json";
 import Lottie from "lottie-react";
 
 const Home = () => {
   const [isAnimated, setIsAnimated] = useState(false);
   const [segment, setSegment] = useState([0, 180]); // Initial segment for the first 6 seconds
+  const [isMining, setIsMining] = useState(false); // Track mining state
 
   const handleReconnect = () => {
-    setIsAnimated(true);
+    if (isMining) {
+      // Stop mining
+      setIsMining(false);
+      setIsAnimated(false); // Stop animation
+      setSegment([0, 180]); // Reset to initial segment
+    } else {
+      // Start mining
+      setIsMining(true);
+      setIsAnimated(true);
+    }
   };
 
   // Switch to the looping segment after the initial segment completes
@@ -64,7 +75,11 @@ const Home = () => {
           }}
         />
       )}
-      <div className="title">Cloud Mining</div>
+      <div className="nav">
+        <div className="title">Cloud Mining</div>
+        <img src={hamburger} alt="menu-icon" />
+      </div>
+
       <div className="bottomContainer">
         <div className="contract">
           <h2>Fil shoot contract</h2>
@@ -77,8 +92,16 @@ const Home = () => {
         <div className="level">
           <span>LV3</span>
           <span>x 330%</span>
-          <button className="button" onClick={handleReconnect}>
-            Reconnect
+          <button
+            className="button"
+            onClick={handleReconnect}
+            style={{
+              background: isMining
+                ? "red"
+                : "linear-gradient(180deg, #4de1ff 0%, #327fa6 100%)",
+            }}
+          >
+            {isMining ? "Stop Mining" : "Start Mining"}
           </button>
         </div>
       </div>
