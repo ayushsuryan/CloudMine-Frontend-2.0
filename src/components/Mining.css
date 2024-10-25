@@ -4,15 +4,15 @@
     align-items: center;
     justify-content: space-between;
     height: 100vh;
-    padding: 25px 0px;
 }
 
 .bottomContainer {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    height: 300px;
+    justify-content: end;
+    height: 90vh;
     margin: 0px 25px;
+    padding-bottom: 70px;
 }
 
 .tab-menu {
@@ -86,6 +86,7 @@
     justify-content: space-evenly;
     align-items: center;
     padding: 12px 16px;
+    margin-top: 25px;
 }
 
 .level span {

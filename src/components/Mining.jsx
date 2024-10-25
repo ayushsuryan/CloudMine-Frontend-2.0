@@ -4,15 +4,11 @@ import "./Mining.css";
 import shadowImage from "../assets/shadow.svg";
 import animationData from "../assets/animation.json";
 import Lottie from "lottie-react";
-import Nav from "../components/Nav"; // Import the Nav component
-import Modal from "../components/Modal"; // Import the Modal component
 
 const Mining = () => {
   const [isAnimated, setIsAnimated] = useState(false);
   const [segment, setSegment] = useState([0, 180]); // Initial segment for the first 6 seconds
   const [isMining, setIsMining] = useState(false); // Track mining state
-  const [isModalOpen, setIsModalOpen] = useState(false); // State for modal
-
   const handleReconnect = () => {
     if (isMining) {
       // Stop mining
@@ -24,14 +20,6 @@ const Mining = () => {
       setIsMining(true);
       setIsAnimated(true);
     }
-  };
-
-  const openModal = () => {
-    setIsModalOpen(true); // Open modal
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false); // Close modal
   };
 
   // Switch to the looping segment after the initial segment completes
@@ -67,7 +55,7 @@ const Mining = () => {
             position: "absolute",
             width: "100%",
             height: "408px",
-            top: "100px",
+            top: "50px",
             left: "50%",
             transform: "translateX(-50%)",
           }}
@@ -80,13 +68,13 @@ const Mining = () => {
             position: "absolute",
             width: "100%",
             height: "408px",
-            top: "100px",
+            top: "50px",
             left: "50%",
             transform: "translateX(-50%)",
           }}
         />
       )}
-      <Nav onOpen={openModal} /> {/* Pass openModal to Nav */}
+
       <div className="bottomContainer">
         <div className="contract">
           <h2>Fil shoot contract</h2>
@@ -113,7 +101,6 @@ const Mining = () => {
         </div>
       </div>
       {/* Modal component with isOpen state */}
-      <Modal isOpen={isModalOpen} onClose={closeModal} />
     </div>
   );
 };

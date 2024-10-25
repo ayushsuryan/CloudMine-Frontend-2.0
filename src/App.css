@@ -1,0 +1,18 @@
+/* src/App.css */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Ensure the app takes the full height of the viewport */
+}
+
+.nav {
+    height: 8vh; /* Nav takes 10% of the viewport height */
+    color: white; /* Optional: Change text color */
+}
+
+.routes {
+    height: 90vh; /* Routes take 90% of the viewport height */
+    overflow-y: auto; /* Add scroll if content overflows */
+    background-color: #252433; /* Optional: Background color for routes */
+    color: white; /* Optional: Change text color */
+}
