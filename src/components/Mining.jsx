@@ -1,14 +1,17 @@
+// src/pages/Mining.jsx
 import React, { useState, useEffect } from "react";
-import "./Home.css";
+import "./Mining.css";
 import shadowImage from "../assets/shadow.svg";
-import hamburger from "../assets/hamburger.svg";
 import animationData from "../assets/animation.json";
 import Lottie from "lottie-react";
+import Nav from "../components/Nav"; // Import the Nav component
+import Modal from "../components/Modal"; // Import the Modal component
 
-const Home = () => {
+const Mining = () => {
   const [isAnimated, setIsAnimated] = useState(false);
   const [segment, setSegment] = useState([0, 180]); // Initial segment for the first 6 seconds
   const [isMining, setIsMining] = useState(false); // Track mining state
+  const [isModalOpen, setIsModalOpen] = useState(false); // State for modal
 
   const handleReconnect = () => {
     if (isMining) {
@@ -21,6 +24,14 @@ const Home = () => {
       setIsMining(true);
       setIsAnimated(true);
     }
+  };
+
+  const openModal = () => {
+    setIsModalOpen(true); // Open modal
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false); // Close modal
   };
 
   // Switch to the looping segment after the initial segment completes
@@ -75,11 +86,7 @@ const Home = () => {
           }}
         />
       )}
-      <div className="nav">
-        <div className="title">Cloud Mining</div>
-        <img src={hamburger} alt="menu-icon" />
-      </div>
-
+      <Nav onOpen={openModal} /> {/* Pass openModal to Nav */}
       <div className="bottomContainer">
         <div className="contract">
           <h2>Fil shoot contract</h2>
@@ -105,8 +112,10 @@ const Home = () => {
           </button>
         </div>
       </div>
+      {/* Modal component with isOpen state */}
+      <Modal isOpen={isModalOpen} onClose={closeModal} />
     </div>
   );
 };
 
-export default Home;
+export default Mining;
