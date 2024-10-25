@@ -1,8 +1,14 @@
 // src/App.jsx
 import React, { useState } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+} from "react-router-dom";
 import Home from "./components/Home"; // Import Home page
 import Mining from "./components/Mining"; // Import Mining page
+import Order from "./components/Order"; // Import Order page
 import Modal from "./components/Modal"; // Import Modal component
 import Nav from "./components/Nav"; // Import Nav component
 import "./App.css"; // Import global styles
@@ -24,14 +30,13 @@ const App = () => {
   return (
     <Router>
       <div className="app-container">
-        {" "}
-        {/* Wrap in a container */}
         <Nav onOpen={openModal} isModal={isModalActive} />
         <div className="routes">
-          {" "}
-          {/* Add class for routes */}
           <Routes>
+            <Route path="/" element={<Navigate to="/Home" />} />{" "}
+            {/* Default redirect */}
             <Route path="/Home" element={<Home />} />
+            <Route path="/Order" element={<Order />} />
             <Route path="/mining" element={<Mining />} />
           </Routes>
         </div>
