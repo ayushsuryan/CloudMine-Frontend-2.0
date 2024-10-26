@@ -1,13 +1,7 @@
-.container {
-    position: relative; /* Ensure the container is positioned for absolute children */
-}
+/* Existing Styles */
 
-.blurred-image-container {
-    position: absolute; /* Position absolutely within the container */
-    width: 100%;
-    height: 408px; /* Adjust as needed */
-    overflow: hidden; /* Hide overflow if necessary */
-    z-index: 0; /* Set to 0 to stay behind the cards */
+.container {
+    position: relative;
 }
 
 .blurred-image {
@@ -17,13 +11,13 @@
     top: 10px;
     left: 50%;
     transform: translateX(-50%);
-    object-fit: cover; /* Ensures the image covers the container */
-    filter: blur(10px); /* Apply blur effect directly to the image */
+    object-fit: cover;
+    filter: blur(10px);
 }
 
 .cards-container {
-    position: relative; /* This allows the cards to be on top of the blurred image */
-    z-index: 1; /* Ensure cards are above the blurred background */
+    position: relative;
+    z-index: 1;
     width: 100%;
     margin-top: 50px;
     padding-bottom: 50px;
@@ -45,6 +39,7 @@
     gap: 25px;
     align-items: center;
 }
+
 .card img {
     width: 100px;
 }
@@ -69,9 +64,109 @@
     gap: 8px;
     font-size: smaller;
 }
+
 .red-text {
-    color: red; /* Set the text color to red */
+    color: red;
 }
+
 .gray-text {
-    color: rgb(192, 192, 192); /* Set the text color to red */
+    color: rgb(192, 192, 192);
+}
+.black-text {
+    color: rgb(0, 0, 0);
+}
+
+.buyBtn {
+    color: #ffffff;
+    margin: 0 auto;
+    width: 50px;
+    height: 28px;
+    justify-self: start;
+    background: linear-gradient(180deg, #b33212 0%, #80230d 100%);
+    box-shadow:
+        0px 0px 0px 2px rgba(0, 0, 0, 0.2),
+        0px 4px 8px rgba(0, 0, 0, 0.2),
+        inset 0px -1px 0px rgba(245, 76, 24, 0.6),
+        inset 0px 1px 0px rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    border: none;
+}
+
+/* New Modal Styles */
+
+.modal {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(246, 246, 255);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+    animation: slide-up 0.3s ease-in-out;
+}
+
+@keyframes slide-up {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.modal-content {
+    width: 100%;
+    max-width: 400px;
+    color: black;
+    text-align: center;
+    font-family: "Roboto";
+}
+
+.modal-content p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.modal-content .balance-info {
+    margin-top: 15px;
+    font-size: 14px;
+    color: rgb(192, 192, 192);
+}
+
+.modal-content .confirmBtn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: linear-gradient(180deg, #4de1ff 0%, #327fa6 100%);
+    box-shadow:
+        0px 4px 8px rgba(0, 0, 0, 0.2),
+        inset 0px -1px 0px rgba(34, 139, 34, 0.6),
+        inset 0px 1px 0px rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.modal-content .confirmBtn:disabled {
+    background: linear-gradient(180deg, #e4e4e4 0%, #7c7c7c 100%);
+
+    cursor: not-allowed;
+    pointer-events: none;
+    color: white;
+}
+
+.modal-content .close {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    color: black;
+    font-size: 24px;
+    cursor: pointer;
 }
