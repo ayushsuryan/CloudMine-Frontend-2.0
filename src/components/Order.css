@@ -26,15 +26,15 @@
     z-index: 1; /* Ensure cards are above the blurred background */
     width: 100%;
     margin-top: 50px;
+    padding-bottom: 50px;
 }
 
 .card {
     display: flex;
-
     flex-direction: row;
     width: 90%;
     padding: 0px 20px;
-    margin: auto;
+    margin: 25px auto;
     height: 128px;
     background: linear-gradient(180deg, rgba(37, 36, 51, 0.8) 0%, rgba(37, 36, 51, 0.2) 100%);
     border: 0.5px solid rgba(255, 255, 255, 0.1);
@@ -44,7 +44,9 @@
     border-radius: 8px;
     gap: 25px;
     align-items: center;
-    margin-top: 10px; /* Add space between cards */
+}
+.card img {
+    width: 100px;
 }
 
 .right {
