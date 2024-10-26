@@ -1,9 +1,22 @@
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M18.6521 17.2632L21.4721 17.5232V19.8874L18.0039 22L14.6095 20.9053L18.6516 17.2632H18.6521ZM8.03735 20.2458L2 18.4274V12.7153L7.04397 13.25L9.85856 19.3811V20.9474L8.03735 20.2458ZM16.1689 18.6842L13.5538 20.9474V19.061L14.4776 8.73633L17.0315 6.73686H20.8202L22 13.8421L16.169 18.6848L16.1689 18.6842ZM10.2772 19.1516L5.63549 8.54894L8.98334 2L14.0817 5.42475L12.9974 19.1521L11.2353 20.9474L10.2772 19.1526L10.2772 19.1516Z" fill="url(#paint0_linear_2291_3580)"/>
-<defs>
-<linearGradient id="paint0_linear_2291_3580" x1="12" y1="2" x2="12" y2="22" gradientUnits="userSpaceOnUse">
-<stop stop-color="#CFD2E6"/>
-<stop offset="1" stop-color="#8F99CC"/>
-</linearGradient>
-</defs>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 28 28" style="enable-background:new 0 0 28 28;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#EF0027;}
+	.st1{fill:#FFFFFF;}
+	.st2{fill:none;stroke:#000000;stroke-opacity:0.3;}
+	.st3{fill:#FFFFFF;fill-opacity:0.8;}
+</style>
+<g id="Layer_2">
+	<g>
+		<circle class="st0" cx="14" cy="14" r="10.5"/>
+		<path class="st1" d="M17.9,10L8.4,8.2l5,12.6l7-8.5L17.9,10L17.9,10z M17.8,10.8l1.5,1.4l-4,0.7L17.8,10.8z M14.4,12.7l-4.2-3.5
+			l6.9,1.3L14.4,12.7z M14.1,13.3L13.4,19L9.7,9.7L14.1,13.3L14.1,13.3z M14.7,13.6l4.4-0.8L14.1,19L14.7,13.6L14.7,13.6z"/>
+	</g>
+</g>
+<g id="Layer_1">
+	<circle class="st2" cx="14" cy="14" r="10"/>
+	<path class="st3" d="M22.8,9.3c0,0-2.3-4.4-8.8-4.4C7.6,5,5.2,9.3,5.2,9.3S7.6,4.1,14,4.1C20.4,4.1,22.8,9.3,22.8,9.3z"/>
+</g>
 </svg>
