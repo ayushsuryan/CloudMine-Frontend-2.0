@@ -141,7 +141,6 @@ const Order = () => {
                 </div>
               </div>
             </div>
-
             <p className="balance">
               <strong>Available Balance:</strong> {balance.toLocaleString()}
             </p>
@@ -152,6 +151,13 @@ const Order = () => {
             >
               Confirm Purchase
             </button>
+            {balance < selectedRig.price && (
+              <div>
+                {" "}
+                <br />
+                <span className="red-text">Low Balance</span>
+              </div>
+            )}
           </div>
         </div>
       )}
